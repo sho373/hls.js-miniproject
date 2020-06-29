@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="#" />
+		
+		<!-- hls.js-CDN -->
+		<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+		<script src="../js/set-video.js"></script>
+
+		
+		<title>Micro project</title>
+		<style>
+			div.frag {
+			
+			width: 400px;
+			height: 480px;
+			overflow-x: scroll;
+			overflow-y: scroll;
+			margin-left: 20px;
+			}
+			.layout{
+				display:flex
+			}
+
+		</style>
+	</head>
+	
+	<body>
+		<form>
+			<h3>
+				Source URL
+			</h3>
+			<select id = "myList" onChange = "setPlayList();">
+				<option value = "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8">Select a test-stream from drop-down menu. Or enter custom URL below</option>
+				<option value = "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8">
+					Big Buck Bunny - adaptive qualities</option>
+				<option value = "https://test-streams.mux.dev/test_001/stream.m3u8">
+					ARTE China,ABR
+				</option>
+				<!-- <option value = "./hls3/master.m3u8">
+					Big Buck Bunny - short ver
+				</option>
+				<option value = "./hls2/master.m3u8">
+					The Simpsons
+				</option> -->
+			</select>
+			<p><input type="text" id="setList" size = "100" onkeydown="enterCustumUrl(this)" ></input></p>
+		</form>
+		
+		
+		<div class="layout">
+		<video id="video" controls preload="metadata" width="854" height="480">
+			<p>
+				use different browser
+			</p>
+		</video>
+		<div class="frag">
+			<span id = "currentFrag"></span>
+		</div>
+		</div>
+		<h4>
+			Quality Control
+		</h4>
+		<div id ="currentLevelBtn">
+			Current Level  
+			<div id = "currentLevelBtns">
+			</div>
+		</div>
+		<h4>
+			Video Information
+		</h4>
+		<div class="info">
+			<p>Bitrate:<span id = bitrateValue></span></p>
+			<p>Height:<span id = heightValue></span></p>
+			<p>Width:<span id = widthValue></span></p>
+			<p>Video codec:<span id = videoCodecValue></span></p>
+			<p>Audio codec:<span id = audioCodecValue></span></p>
+		</div>
+		
+	</body>
+</html>
