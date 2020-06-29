@@ -12,5 +12,5 @@ Displays basic information about the video (bitrate, height, width, video/audio 
  
 [DEMO](https://sho373.github.io/hls.js-miniproject/videos/)
 
-![alt tag](example.png)
-![alt tag](example2.png)
+![alt tag](example.jpg)
+![alt tag](example2.jpg)
