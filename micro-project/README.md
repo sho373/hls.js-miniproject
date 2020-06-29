@@ -10,7 +10,7 @@ Buttons for manual switch between bitrates
 Displays basic information about the video (bitrate, height, width, video/audio codec)
 
  
-[DEMO](https://sho373.github.io/hls.js-miniproject/micro-project/videos/)
+[DEMO](https://sho373.github.io/hls.js-miniproject/)
 
 ![alt tag](example.jpg)
 
